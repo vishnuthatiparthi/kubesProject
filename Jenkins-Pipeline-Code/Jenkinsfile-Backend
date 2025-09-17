@@ -50,7 +50,7 @@ pipeline {
                             sed -i "s#image:.*#image: 564398348890.dkr.ecr.us-east-1.amazonaws.com/backend:$BUILD_NUMBER#g" backend-deployment.yaml
                             git add .
                             git commit -m "Update deployment Image to version \${BUILD_NUMBER}"
-                            git push https://${git_token}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
+                            git push https://${git_token}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:master
                         '''
                     }
                 }
